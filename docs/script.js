@@ -1,18 +1,32 @@
 $(document).ready(function () {
-    let navh = $("nav").offset().top;
+    let navbarPosition = $("#navbar").offset().top;
 
-    function checkPos() {
-        if ($(window).scrollTop() > navh) {
-            $("nav").addClass("sticky");
-        }
-        else {
-            $("nav").removeClass("sticky");
+    function stickyNavbar() {
+        if ($(window).scrollTop() > navbarPosition) {
+            $("#navbar").addClass("sticky");
+            $('.search-input').css({
+                'margin-left': "220px"
+            });
+            $('#logo').css({
+                'position' : 'fixed'
+            });
+            $("#buttons").slideUp();
+        } else {
+            $("#navbar").removeClass("sticky");
+            $('.search-input').css({
+                'margin-left': "0px"
+            });
+            $('#logo').css({
+                'position' : 'relative'
+            });
+            $("#buttons").slideDown();
         }
     }
 
-    checkPos();
+    stickyNavbar();
 
     $(window).scroll(function () {
-        checkPos();
-    })
+        stickyNavbar();
+    });
+
 });

@@ -7,38 +7,64 @@ body {
 }
 
 #main-container {
-    width: 70%;
-}
-
-nav {
-    color: white;
+    width: 55%;
 }
 
 #logo {
-    height: 100px;
-    background-color: #121212;
+    font-family: 'Anton', sans-serif;
+    height: 50px;
     font-size: 40px;
-    display: flex;
-    align-items: flex-end;
+    color: white;
+    position: relative;
+    z-index: 10;
+    padding: 10px 0;
+    transition: all 0.5s 0.5s;
 }
 
-#img-logo {
+.img-logo {
     height: 50px;
-    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#navbar {
+    color: white;
+    background-color: #121212;
 }
 
 #searchbar {
+    padding: 10px 0;
+    position: relative;
     height: 50px;
+    display: flex;
+}
+
+#searchbar-logo {
+    background-color: #121212;
+    display: none;
+    font-size: 40px;
 }
 
 .search-input {
-    width: 100%;
+    flex-grow: 1;
+    background-color: white;
     height: 100%;
-    border: none;
     box-sizing: border-box;
-    padding: 10px;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    transition: all 0.5s;
 }
 
+.search-button {
+    height: 100%;
+    width: 50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 20px;
+}
 
 #buttons {
     height: 50px;
@@ -46,16 +72,17 @@ nav {
 }
 
 .sticky {
+    margin-top: 0 !important;
     position: fixed;
     top: 0;
-    width: 70%;
+    width: 55%;
 }
 
 .sticky + #content {
-    margin-top: 200px;
+    margin-top: 70px;
 }
 
 #content {
     height: 2000px;
-    background: url("https://images.pexels.com/photos/838423/pexels-photo-838423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background: url("https://images.pexels.com/photos/988873/pexels-photo-988873.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
 }
