@@ -8,7 +8,7 @@ $(document).ready(function () {
                 'margin-left': "220px"
             });
             $('#logo').css({
-                'position' : 'fixed'
+                'position': 'fixed'
             });
             $("#buttons").slideUp();
         } else {
@@ -17,7 +17,7 @@ $(document).ready(function () {
                 'margin-left': "0px"
             });
             $('#logo').css({
-                'position' : 'relative'
+                'position': 'relative'
             });
             $("#buttons").slideDown();
         }
