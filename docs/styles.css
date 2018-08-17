@@ -58,12 +58,20 @@ body {
 .search-button {
     height: 100%;
     width: 50px;
-    background-color: red;
+    background: linear-gradient(226deg, #ffc800, #9f00ff, #ff0000);
+    background-size: 600% 600%;
+    animation: AnimationName 6s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     font-size: 20px;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 #buttons {
@@ -88,7 +96,7 @@ body {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: dense;
+    grid-auto-rows: 300px;
 }
 
 .gifs {
