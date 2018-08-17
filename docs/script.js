@@ -1,4 +1,35 @@
 $(document).ready(function () {
+    /* KOD KUBY */
+    let navbarPosition = $("#navbar").offset().top;
+
+    function stickyNavbar() {
+        if ($(window).scrollTop() > navbarPosition) {
+            $("#navbar").addClass("sticky");
+            $('.search-input').css({
+                'margin-left': "220px"
+            });
+            $('#logo').css({
+                'position': 'fixed'
+            });
+            $("#buttons").slideUp();
+        } else {
+            $("#navbar").removeClass("sticky");
+            $('.search-input').css({
+                'margin-left': "0px"
+            });
+            $('#logo').css({
+                'position': 'relative'
+            });
+            $("#buttons").slideDown();
+        }
+    }
+
+    stickyNavbar();
+
+    $(window).scroll(function () {
+        stickyNavbar();
+    });
+    /* KOD ADRIANA */
     $(".search-button").click(function(){
         let userInput = $(".search-input").val().trim();
         userInput = userInput.replace(/ /g, "+");
@@ -14,11 +45,11 @@ $(document).ready(function () {
                 var giphyURL = response.data[getRandomInt(0, 100)].images.original.url;
                 var imgNr = "img"+i;
                 $('<img/>', {
-                    'id': imgNr
-                }).appendTo("#window");
+                    'id': imgNr,
+                    'class' : 'gifs'
+                }).appendTo("#content");
                 $("#"+imgNr).attr("src", giphyURL);
             }
-            console.log($("#window").length);
 
         });
 
