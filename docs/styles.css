@@ -45,7 +45,7 @@ body{
 }
 
 
-.anchor{
+.input{
     color: #ffffff;
     font-style: italic;
     font-size: 14px;
@@ -54,6 +54,7 @@ body{
 }
 
 
-.anchor:hover{
+.input:hover{
     color: #0cf;
+    cursor: pointer;
 }
