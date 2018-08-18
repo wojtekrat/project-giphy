@@ -1,51 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head -->
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Giphy</title>
 </head>
 <body>
 <div id="panel">
     <div id="hashtags_container">
+<!-- "searched" as a name of the word/expression  we've been looking for -->
         <div class="searchbar_result">
         </div>    
-        <div class="hashtags">
-            <div class="hashtag">
-                <div class="text">
-                   <a class="input>
-                      <h3>#wheel</h3>
-                   </a> 
-                </div>
-            </div>
-            <div class="hashtag">
-                <div class="text">
-                    <a class="input">
-                       <h3>#paola</h3>
-                    </a>
-                </div>
-            </div>
-            <div class="hashtag">
-                <div class="text">
-                    <a class="input">
-                        <h3>#raz degan</h3>
-                    </a>
-                </div>
-            </div>
-            <div class="hashtag">
-                <div class="text">
-                    <a class="input">
-                        <h3>#theft auto</h3> 
-                    </a>
-                </div>
+        <div id="value" class="hashtags">
+            <div class="input">
+                <button id="wheel" onclick="jump">#wheel></button>
+                <button id="paola" onclick="jump()">#paola</button>
+                <button id="raz_degan" onclick="jump()">#raz degan</button>
+                <button id="grand_theft_auto" onclick="jump()">#grand theft auto</button>
             </div>
         </div>
     </div>
 </div>
 
-<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
