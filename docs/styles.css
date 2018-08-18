@@ -18,7 +18,8 @@ body {
     position: relative;
     z-index: 10;
     padding: 10px 0;
-    transition: all 0.5s 0.5s;
+    display: flex;
+
 }
 
 .img-logo {
@@ -34,7 +35,7 @@ body {
 #searchbar {
     padding: 10px 0;
     position: relative;
-    height: 50px;
+    height: 40px;
     display: flex;
 }
 
@@ -50,20 +51,29 @@ body {
     height: 100%;
     box-sizing: border-box;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     padding-left: 10px;
     transition: all 0.5s;
+    border-radius: 2px;
 }
 
 .search-button {
     height: 100%;
     width: 50px;
-    background-color: red;
+    background-color: #ff4c15;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     font-size: 20px;
+    border-radius: 2px;
+    transition: all 0.7s;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #1e96ff;
+    color: white;
 }
 
 #buttons {
@@ -79,7 +89,7 @@ body {
 }
 
 .sticky + #content {
-    margin-top: 170px;
+    margin-top: 130px;
 }
 
 #content {

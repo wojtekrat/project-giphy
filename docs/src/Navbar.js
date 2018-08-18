@@ -10,11 +10,14 @@ class Navbar {
         if ($(window).scrollTop() > this.navbarPosition) {
             $("#navbar").addClass("sticky");
             $('.search-input').css({
-                'margin-left': "220px"
+                'margin-left': "240px"
             });
             $('#logo').css({
-                'position': 'fixed'
-            });
+                'position': 'fixed',
+                'padding': '5px 15px',
+                'align-items': 'center'
+            })
+            ;
             $("#buttons").slideUp();
         } else {
             $("#navbar").removeClass("sticky");
@@ -22,9 +25,11 @@ class Navbar {
                 'margin-left': "0px"
             });
             $('#logo').css({
-                'position': 'relative'
+                'position': 'relative',
+                'padding': '10px 0',
+                'align-items': 'initial'
             });
-            $("#buttons").slideDown();
+            $("#buttons").delay(50).slideDown();
         }
     };
 
