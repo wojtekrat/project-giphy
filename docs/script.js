@@ -54,7 +54,7 @@ $(document).ready(function () {
                     id: imgNr, class: "gifs"}).appendTo("#content");
                 $("#" + imgNr).attr("src", giphyURL);
                 divNr = "div" + i;
-                $("<div/>", {id: divNr, class: "gif-overlay"}).appendTo("#overlay");
+                $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
                 $("#" + divNr).append("<a>Otwórz</a>").attr("href", giphyURL);
                 
 
