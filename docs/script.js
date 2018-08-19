@@ -40,6 +40,7 @@ $(document).ready(function () {
         let resposneArguments;
         let devChoice;
         let numToGenerate;
+        let divNr;
     /* WYWOŁANIE FUNKCJI WYŚWIETLAJĄCEJ NAJPOPULARNIEJSZE GIFY PO ZAŁADOWANIU STRONY */
         randomGifs();
     /* NAJPOPULARNIEJSZE GIFY */
@@ -50,10 +51,12 @@ $(document).ready(function () {
                 giphyURL = response.data[i].images.original.url;
                 imgNr = "img" + i;
                 $("<img/>", {
-                    id: imgNr,
-                    class: "gifs"
-                }).appendTo("#content");
+                    id: imgNr, class: "gifs"}).appendTo("#content");
                 $("#" + imgNr).attr("src", giphyURL);
+                divNr = "div" + i;
+                $("<div/>", {id: divNr, class: "gif-overlay"}).appendTo("#overlay");
+                $("#" + divNr).append("<a>Otwórz</a>").attr("href", giphyURL);
+                
 
             };
         });
