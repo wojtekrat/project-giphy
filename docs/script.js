@@ -97,14 +97,14 @@ $(document).ready(function () {
                         $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
                         $("#" + divNr)
                           .append("<a></a>")
-                          .attr("href", giphyURL),("data-lightbox", "giffie")
+                          .attr("href", giphyURL)
                           .attr("data-lightbox", "giffie");
                      }
                     else {
                         $("<img/>", {id: imgNr, class: "gifs"
                         }).appendTo("#content");
                         $("#" + imgNr).attr("src", giphyURL);
-                        
+                       
                         };
                 };
         });
