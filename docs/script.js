@@ -91,18 +91,19 @@ $(document).ready(function () {
                     giphyURL = response.data[i].images.original.url;
                     console.log(resposneArguments);
                     var imgNr = "img" + i;
+                    divNr = "div" + i;
                     if ($("#img"+(numToGenerate-1)).length > 0) {
                         $("#" + imgNr).attr("src", giphyURL);
-                        divNr = "div" + i ;
-                        $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
-                        $("#" + divNr).append("<a></a>")
+                        $("#" + divNr)
+                          .append("<a></a>")
                           .attr("href", giphyURL)
                           .attr("data-lightbox", "giffie");
                      }
                     else {
-                        $("<img/>", {id: imgNr, class: "gifs"
-                        }).appendTo("#content");
+                        $("<img/>", {id: imgNr, class: "gifs"}).appendTo("#content");
                         $("#" + imgNr).attr("src", giphyURL);
+                        $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
+                        $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
                         
                         };
                 };
