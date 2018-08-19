@@ -55,7 +55,7 @@ $(document).ready(function () {
                 $("#" + imgNr).attr("src", giphyURL);
                 divNr = "div" + i;
                 $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
-                $("#" + divNr).append("<a></a>").attr("href", giphyURL);
+                $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
                 
 
             };
@@ -97,7 +97,8 @@ $(document).ready(function () {
                         $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
                         $("#" + divNr)
                           .append("<a></a>")
-                          .attr("href", giphyURL);
+                          .attr("href", giphyURL),("data-lightbox", "giffie")
+                          .attr("data-lightbox", "giffie");
                      }
                     else {
                         $("<img/>", {id: imgNr, class: "gifs"
