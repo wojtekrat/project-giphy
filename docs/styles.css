@@ -84,7 +84,7 @@ body {
     margin-top: 0 !important;
     position: fixed;
     top: 0;
-    width: 55%;
+    width: 70%;
 }
 
 .sticky {
@@ -138,12 +138,16 @@ height: 180px;
 .gif-overlay {
     height: 180px;
     width: 250px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  background-image: linear-gradient(black,transparent,black);
+opacity: 0;
+transition: 0.3s ease-in-out;
 }
 .gifs:hover {
 cursor: pointer;
+}
+
+.gif-overlay:hover {
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 1500px)
