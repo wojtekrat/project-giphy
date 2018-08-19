@@ -47,7 +47,7 @@ $(document).ready(function () {
     function randomGifs() {
         randomURL = "http://api.giphy.com/v1/gifs/trending?api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543";
         $.ajax({ url: randomURL, method: 'GET' }).done(function (response) {
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 21; i++) {
                 giphyURL = response.data[i].images.original.url;
                 imgNr = "img" + i;
                 $("<img/>", {
@@ -55,7 +55,7 @@ $(document).ready(function () {
                 $("#" + imgNr).attr("src", giphyURL);
                 divNr = "div" + i;
                 $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
-                $("#" + divNr).append("<a>Otwórz</a>").attr("href", giphyURL);
+                $("#" + divNr).append("<a></a>").attr("href", giphyURL);
                 
 
             };
@@ -93,13 +93,17 @@ $(document).ready(function () {
                     var imgNr = "img" + i;
                     if ($("#img"+(numToGenerate-1)).length > 0) {
                         $("#" + imgNr).attr("src", giphyURL);
+                        divNr = "div" + i;
+                        $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
+                        $("#" + divNr)
+                          .append("<a></a>")
+                          .attr("href", giphyURL);
                      }
                     else {
-                        $("<img/>", {
-                             id: imgNr,
-                             class: "gifs"
+                        $("<img/>", {id: imgNr, class: "gifs"
                         }).appendTo("#content");
                         $("#" + imgNr).attr("src", giphyURL);
+                        
                         };
                 };
         });
