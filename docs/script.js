@@ -84,7 +84,7 @@ $(document).ready(function () {
                     numToGenerate = devChoice;
                 }
                 else {
-                    numToGenerate = resposneArguments;
+                    numToGenerate = resposneArguments +1;
                 };
                 /* GENERUJE NOWE GIFY POCZĄWSZY OD POZYCJI 0 KOŃCZĄC NA POZYCJI W FUNKCJI howMany */
                 for (let i = 0; i < numToGenerate; i++) {
@@ -93,10 +93,9 @@ $(document).ready(function () {
                     var imgNr = "img" + i;
                     if ($("#img"+(numToGenerate-1)).length > 0) {
                         $("#" + imgNr).attr("src", giphyURL);
-                        divNr = "div" + i;
+                        divNr = "div" + i ;
                         $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
-                        $("#" + divNr)
-                          .append("<a></a>")
+                        $("#" + divNr).append("<a></a>")
                           .attr("href", giphyURL)
                           .attr("data-lightbox", "giffie");
                      }
@@ -104,7 +103,7 @@ $(document).ready(function () {
                         $("<img/>", {id: imgNr, class: "gifs"
                         }).appendTo("#content");
                         $("#" + imgNr).attr("src", giphyURL);
-                       
+                        
                         };
                 };
         });
