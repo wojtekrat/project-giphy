@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
@@ -18,28 +18,31 @@
             <img src="images/logo.png" class="img-logo">GIPHIES</div>
         <nav id="navbar">
             <div id="searchbar">
-                <input type="text" class="search-input" placeholder="Search..." />
+                <input type="text" id="search-input-id" class="search-input" placeholder="Search..." />
                 <button class="search-button" type="button">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
-            <div id="panel">
+           
+        </nav> 
+        <div id="panel">
                 <div id="hashtags_container">
-            <!-- "searched" as a name of the word/expression  we've been looking for -->
-                    <div class="searchbar_result">
-                    </div>    
+                    <!-- "searched" as a name of the word/expression  we've been looking for -->
+                   
                     <div class="hashtags">
                         <div id="value" class="input">
-                            <button class="hashtag" onclick="jump()">#wheel</button>
-                            <button class="hashtag" onclick="jump()">#paola</button>
-                            <button class="hashtag" onclick="jump()">#raz degan</button>
-                            <button class="hashtag" onclick="jump()">#grand theft auto</button>
+                            <button class="hashtag" value="wheel" onclick="jump(this.value)">#wheel</button>
+                            <button class="hashtag" value="paola" onclick="jump(this.value)">#paola</button>
+                            <button class="hashtag" value="raz degan" onclick="jump(this.value)">#raz degan</button>
+                            <button class="hashtag" value="grand theft" onclick="jump(this.value)">#grand theft auto</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div id="content"></div>
+        <div id="content-wrapper">
+            <div id="content"></div>
+            <div id="overlay"></div>
+        </div>
     </div>
 
 
@@ -48,4 +51,8 @@
 </body>
 
 </html>
+
+
+
+
 
