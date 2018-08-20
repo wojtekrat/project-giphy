@@ -1,7 +1,7 @@
 class Api {
 
     constructor() {
-        document.querySelector('.search-button').addEventListener('click', () => this.getObject(20));
+        document.querySelector('.search-button').addEventListener('click', () => this.getObject(21));
     }
 
 
@@ -9,7 +9,7 @@ class Api {
         let randomURL = "http://api.giphy.com/v1/gifs/trending?api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543";
         console.log("dsa");
         $.ajax({url: randomURL, method: 'GET'}).done(function (response) {
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 21; i++) {
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
                 $("<img/>", {
@@ -24,7 +24,7 @@ class Api {
 
     getObject(num) {
         let userInput = $(".search-input").val().trim().replace(/ /g, "+");
-        let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
+        let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=30";
 
         $.ajax({url: queryURL, method: 'GET'}).done(function (response) {
             let resposneArguments = response.data.length;
