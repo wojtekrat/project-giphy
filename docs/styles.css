@@ -6,6 +6,10 @@ body {
     justify-content: center;
 }
 
+input:focus, button:focus {
+    outline: none;
+}
+
 #main-container {
     width: 100%;
 }
@@ -91,16 +95,13 @@ body {
     height: 40px;
     background-color: #3a3838ab;
     border-radius: 20px;
-    display: inline-block;
     -webkit-animation: slideFromBottom 1000ms ease-out;
     -moz-animation: slideFromBottom 1000ms ease-out;
     -ms-animation: slideFromBottom 1000ms ease-out;
-    -webkit-animation-delay: 1s; /* Safari and Chrome */
     padding: 10px 0;
     color: #ffffff;
     font-style: italic;
     font-size: 14px;
-    text-decoration: none;
     border: none;
 }
 
