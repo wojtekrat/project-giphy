@@ -13,10 +13,12 @@ class Api {
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
                 $("<img/>", {
-                    id: imgNr,
-                    class: "gifs"
+                    id: imgNr, class: "gifs"
                 }).appendTo("#content");
                 $("#" + imgNr).attr("src", giphyURL);
+                let divNr = "div" + i;
+                $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
+                $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
             }
         });
     };
