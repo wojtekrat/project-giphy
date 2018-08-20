@@ -22,11 +22,6 @@ body {
 
 }
 
-.img-logo {
-    height: 50px;
-    padding-right: 10px;
-}
-
 #navbar {
     color: white;
     background-color: #121212;
@@ -35,7 +30,7 @@ body {
 #searchbar {
     padding: 10px 0;
     position: relative;
-    height: 40px;
+    height: 50px;
     display: flex;
 }
 
@@ -51,29 +46,28 @@ body {
     height: 100%;
     box-sizing: border-box;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     padding-left: 10px;
     transition: all 0.5s;
-    border-radius: 2px;
 }
 
 .search-button {
     height: 100%;
     width: 50px;
-    background-color: #ff4c15;
+    background: linear-gradient(226deg, #ffc800, #9f00ff, #ff0000);
+    background-size: 600% 600%;
+    animation: AnimationName 6s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     font-size: 20px;
-    border-radius: 2px;
-    transition: all 0.7s;
 }
 
-.search-button:hover {
-    cursor: pointer;
-    background-color: #1e96ff;
-    color: white;
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 #buttons {
@@ -89,8 +83,19 @@ body {
 }
 
 .sticky + #content {
-    margin-top: 130px;
+    margin-top: 170px;
 }
 
 #content {
+    height: 2000px;
+    background: url("https://images.pexels.com/photos/988873/pexels-photo-988873.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+}
+
+.gifs {
+    width: 400px;
+    height: 300px;
 }
