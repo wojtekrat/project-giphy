@@ -12,12 +12,14 @@ class Api {
             for (let i = 0; i < 21; i++) {
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
-                $("<img/>", {
-                    id: imgNr, class: "gifs"
-                }).appendTo("#content");
-                $("#" + imgNr).attr("src", giphyURL);
                 let divNr = "div" + i;
+
+                $("<img/>", {id: imgNr, class: "gifs"}).appendTo("#content");
+
+                $("#" + imgNr).attr("src", giphyURL);
+
                 $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
+
                 $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
             }
         });
@@ -43,17 +45,17 @@ class Api {
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
                 let divNr = "div" + i;
-                if ($("#img"+(numToGenerate-1)).length > 0) {
+
+                if ($("#img" + (numToGenerate - 1)).length > 0) {
                     $("#" + imgNr).attr("src", giphyURL);
                     $("#" + divNr)
                         .append("<a></a>")
                         .attr("href", giphyURL)
                         .attr("data-lightbox", "giffie");
-                }
-                else {
+                } else {
                     $("<img/>", {id: imgNr, class: "gifs"}).appendTo("#content");
                     $("#" + imgNr).attr("src", giphyURL);
-                    $("<a>", { id: divNr, class: "gif-overlay" }, "<a/>").appendTo("#overlay");
+                    $("<a>", {id: divNr, class: "gif-overlay"}, "<a/>").appendTo("#overlay");
                     $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
                 }
             }
