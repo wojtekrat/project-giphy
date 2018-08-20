@@ -133,6 +133,7 @@ position: absolute;
 .gifs {
 width: 250px;
 height: 180px;
+border-radius: 5px;
 }
 
 .gif-overlay {
