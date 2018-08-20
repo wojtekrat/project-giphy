@@ -88,7 +88,7 @@ body {
     margin-top: 0 !important;
     position: fixed;
     top: 0;
-    width: 55%;
+    width: 60%;
 }
 
 .sticky + #content {
