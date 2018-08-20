@@ -9,7 +9,7 @@ class Navbar {
     sticky = () => {
         if ($(window).scrollTop() > this.navbarPosition) {
             $("#navbar").addClass("sticky");
-            $('.search-input').css({
+            $('#search-input').css({
                 'margin-left': "240px"
             });
             $('#logo').css({
@@ -21,7 +21,7 @@ class Navbar {
             $("#buttons").slideUp();
         } else {
             $("#navbar").removeClass("sticky");
-            $('.search-input').css({
+            $('#search-input').css({
                 'margin-left': "0px"
             });
             $('#logo').css({

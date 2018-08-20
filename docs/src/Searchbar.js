@@ -1,12 +1,18 @@
 class Searchbar {
 
 
-    searchbar = $('.search-input');
+    searchbar = $('#search-input');
 
     constructor() {
         this.flag = false;
         this.searchbar.attr('placeholder', 'Search various GIFs and Stickers!');
         setInterval(this.changePlaceholder, 2000);
+        document.getElementById("search-input").addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-button").click();
+            }
+        });
     }
 
     changePlaceholder = () => {

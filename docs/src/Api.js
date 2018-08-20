@@ -27,7 +27,7 @@ class Api {
 
 
     getObject(num) {
-        let userInput = $(".search-input").val().trim().replace(/ /g, "+");
+        let userInput = $("#search-input").val().trim().replace(/ /g, "+");
         let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=30";
 
         $.ajax({url: queryURL, method: 'GET'}).done(function (response) {

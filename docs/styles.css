@@ -38,7 +38,7 @@ body {
     display: flex;
 }
 
-.search-input {
+#search-input {
     flex-grow: 1;
     background-color: white;
     height: 100%;
