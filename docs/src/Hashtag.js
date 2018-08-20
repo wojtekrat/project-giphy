@@ -1,6 +1,6 @@
 class Hashtag {
     constructor() {
-        jump = (val) => {
+        let jump = (val) => {
             document.getElementById('search-input-id').value = val;
         }
     }

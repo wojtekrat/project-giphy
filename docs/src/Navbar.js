@@ -18,7 +18,7 @@ class Navbar {
                 'align-items': 'center'
             })
             ;
-            $("#buttons").slideUp();
+            $("#hashtags-container").slideUp();
         } else {
             $("#navbar").removeClass("sticky");
             $('#search-input').css({
@@ -29,7 +29,7 @@ class Navbar {
                 'padding': '10px 0',
                 'align-items': 'initial'
             });
-            $("#buttons").delay(50).slideDown();
+            $("#hashtags-container").delay(50).slideDown();
         }
     };
 
