@@ -89,38 +89,35 @@ body {
     margin-top: 0 !important;
     position: fixed;
     top: 0;
-    min-width: 60%;
+    width: 70%;
 }
 
 .sticky + #content {
     margin-top: 130px;
 }
 
-
-
 #content-wrapper {
     position: relative;
 }
 
 #content {
-width: 100%;
-position: absolute;
-display: grid;
-grid-template-columns: repeat(auto-fill, 250px);
-grid-gap: 10px;
-grid-template-rows: 180px;
-grid-auto-flow: dense;
-position: absolute;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 180px;
+    grid-auto-flow: dense;
 }
 
 #overlay {
-width: 100%;
-display: grid;
-grid-template-columns: repeat(auto-fill, 250px);
-grid-gap: 10px;
-grid-template-rows: 180px;
-grid-auto-flow: dense;
-position: absolute;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 180px;
+    grid-auto-flow: dense;
 }
 
 #img0 {
