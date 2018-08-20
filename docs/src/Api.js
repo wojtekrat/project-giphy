@@ -42,6 +42,7 @@ class Api {
                 console.log(resposneArguments);
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
+                let divNr = "div" + i;
                 if ($("#img"+(numToGenerate-1)).length > 0) {
                     $("#" + imgNr).attr("src", giphyURL);
                     $("#" + divNr)
