@@ -50,7 +50,7 @@ body {
     border-radius: 5px;
 }
 
-.search-button {
+#search-button {
     width: 50px;
     background: linear-gradient(226deg, #ffc800, #9f00ff, #ff0000);
     background-size: 600% 600%;
@@ -63,7 +63,7 @@ body {
     border-radius: 5px;
 }
 
-.search-button:hover {
+#search-button:hover {
     color: white;
     cursor: pointer;
 }

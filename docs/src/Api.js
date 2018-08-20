@@ -1,7 +1,7 @@
 class Api {
 
     constructor() {
-        document.querySelector('.search-button').addEventListener('click', () => this.getObject(21));
+        document.querySelector('#search-button').addEventListener('click', () => this.getObject(21));
     }
 
 
