@@ -85,16 +85,9 @@ body {
     height: 182px;
     background-color: #000000;
     color: #ffffff;
-    /* position: relative; */
     text-align: center;
     justify-content: center;
 }
-
-/* .searched{
-    width: 50%;
-    height: 40px;
-    margin: 15px;
-} */
 
 .hashtag {
     width: 100%;
