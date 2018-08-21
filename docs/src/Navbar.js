@@ -22,14 +22,14 @@ class Navbar {
                     'margin-left': "0px",
                 });
                 $('#logo').css({
-                    'opacity': '0'
+                    'opacity': '0',
                 });
             }
             $('#logo').css({
                 'position': 'fixed',
                 'padding': '5px 15px',
                 'align-items': 'center'
-            }).addClass("position-fixed");
+            });
             $("#hashtags-container").slideUp();
         } else {
             $("#navbar").removeClass("sticky");
@@ -45,7 +45,6 @@ class Navbar {
             $("#hashtags-container").delay(50).slideDown();
         }
     };
-
 }
 
 export default Navbar;
