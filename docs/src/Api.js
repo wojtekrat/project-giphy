@@ -50,6 +50,7 @@ class Api {
     }
 
     getMoreGifs() {
+
         let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + this.userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
         let gifsToLoad = this.gifsToLoad;
         let gifsLoaded = this.gifsLoaded;
