@@ -1,6 +1,8 @@
 class Api {
 
     constructor() {
+        this.gifsToLoad = 21;
+        this.gifsLoaded = 0;
         document.querySelector('#search-button').addEventListener('click', () => this.getObject(21));
     }
 
@@ -26,21 +28,24 @@ class Api {
     };
 
 
-    getObject(num) {
+    getObject() {
         let userInput = $("#search-input").val().trim().replace(/ /g, "+");
         let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=30";
+
+        let gifsToLoad = this.gifsToLoad;
+        let gifsLoaded = this.gifsLoaded;
 
         $.ajax({url: queryURL, method: 'GET'}).done(function (response) {
             let resposneArguments = response.data.length;
             let numToGenerate;
 
-            if (resposneArguments > num) {
-                numToGenerate = num;
+            if (resposneArguments > gifsToLoad) {
+                numToGenerate = gifsToLoad;
             } else {
                 numToGenerate = resposneArguments;
             }
 
-            for (let i = 0; i < numToGenerate; i++) {
+            for (let i = gifsLoaded; i < numToGenerate; i++) {
                 console.log(resposneArguments);
                 let giphyURL = response.data[i].images.original.url;
                 let imgNr = "img" + i;
@@ -59,6 +64,7 @@ class Api {
                     $("#" + divNr).append("<a></a>").attr("href", giphyURL).attr("data-lightbox", "giffie");
                 }
             }
+
         });
     };
 
