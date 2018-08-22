@@ -28,7 +28,7 @@ class Api {
     randomGifs() {
         this.clearContentWrapper();
 
-        let randomURL = "http://api.giphy.com/v1/gifs/trending?api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543";
+        let randomURL = "https://api.giphy.com/v1/gifs/trending?api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543";
         $.ajax({url: randomURL, method: 'GET'}).done((response) => this.generateGifs(response));
     }
 
@@ -44,14 +44,14 @@ class Api {
         this.userInput = userInput;
         this.gifsToLoad = 42;
         this.gifsLoaded = 21;
-        let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
+        let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
 
         $.ajax({url: queryURL, method: 'GET'}).done((response) => this.generateGifs(response));
     }
 
     getMoreGifs() {
 
-        let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + this.userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
+        let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + this.userInput + "&api_key=ACSF6DvX2932HZzH0n7O6loDtrvWa543&limit=150";
         let gifsToLoad = this.gifsToLoad;
         let gifsLoaded = this.gifsLoaded;
 
